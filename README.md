@@ -1,1 +1,2 @@
 # Doto-RichTMP
+TextMeshProGUIを色々動かすために作られた自分用のサブモジュールです
