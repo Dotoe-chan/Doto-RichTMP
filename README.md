@@ -21,6 +21,7 @@ Then reference it from `Packages/manifest.json`:
 - `TextMeshWobble`: add to any `TextMeshProUGUI` object to animate each visible character.
 - `TextMeshWobbleScale`: animates each visible character with position wobble and scale wobble.
 - `TextMeshFirstCharacterScale`: scales only the first visible character in a `TextMeshProUGUI`.
+- `TextMeshPikaBlink`: strips `<Pika>...</Pika>` tags and blinks that range from its original color to white.
 
 ## Serialized Fields
 
@@ -28,6 +29,8 @@ Then reference it from `Packages/manifest.json`:
 - `shakeRadius`: per-character wobble amplitude.
 - `scaleAmplitude`: per-character scale wobble amplitude.
 - `scaleMultiplier`: scale applied to the first visible character.
+- `sourceText`: raw string that may include `<Pika>...</Pika>` tags.
+- `blinkSpeed`: speed of the original-color to white blink.
 
 ## Notes
 
