@@ -1,0 +1,14 @@
+{
+  "name": "com.doto.rich-tmp",
+  "version": "0.1.0",
+  "displayName": "Doto Rich TMP",
+  "description": "A reusable TextMeshPro effects package for Unity.",
+  "unity": "6000.0",
+  "dependencies": {
+    "com.unity.textmeshpro": "3.0.6",
+    "com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask"
+  },
+  "author": {
+    "name": "kamet"
+  }
+}

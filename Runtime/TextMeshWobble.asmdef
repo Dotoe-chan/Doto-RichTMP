@@ -1,0 +1,8 @@
+{
+  "name": "Doto.RichTMP",
+  "rootNamespace": "Doto.RichTMP",
+  "references": [
+    "Unity.TextMeshPro",
+    "UniTask"
+  ]
+}
