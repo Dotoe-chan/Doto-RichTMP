@@ -19,12 +19,14 @@ Then reference it from `Packages/manifest.json`:
 ## Components
 
 - `TextMeshWobble`: add to any `TextMeshProUGUI` object to animate each visible character.
+- `TextMeshWobbleScale`: animates each visible character with position wobble and scale wobble.
 - `TextMeshFirstCharacterScale`: scales only the first visible character in a `TextMeshProUGUI`.
 
 ## Serialized Fields
 
 - `speed`: animation speed multiplier.
 - `shakeRadius`: per-character wobble amplitude.
+- `scaleAmplitude`: per-character scale wobble amplitude.
 - `scaleMultiplier`: scale applied to the first visible character.
 
 ## Notes
