@@ -12,6 +12,7 @@ namespace Doto.RichTMP
 
         [Min(0f)]
         public float blinkSpeed = 3f;
+        public AnimationCurve flashCurve = AnimationCurve.EaseInOut(0f, 0f, 1f, 1f);
 
         private const string StartTag = "<Pika>";
         private const string EndTag = "</Pika>";
@@ -176,7 +177,8 @@ namespace Doto.RichTMP
                 return;
 
             TMP_TextInfo textInfo = _textMeshPro.textInfo;
-            float t = (Mathf.Sin(Time.unscaledTime * blinkSpeed) + 1f) * 0.5f;
+            float cycle = Mathf.PingPong(Time.unscaledTime * blinkSpeed, 1f);
+            float t = flashCurve != null ? flashCurve.Evaluate(cycle) : cycle;
 
             foreach (CharacterColorCache target in _targets)
             {

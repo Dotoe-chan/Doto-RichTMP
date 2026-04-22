@@ -31,6 +31,7 @@ Then reference it from `Packages/manifest.json`:
 - `scaleMultiplier`: scale applied to the first visible character.
 - `sourceText`: raw string that may include `<Pika>...</Pika>` tags.
 - `blinkSpeed`: speed of the original-color to white blink.
+- `flashCurve`: interpolation curve used for the original-color to white flash.
 
 ## Notes
 
