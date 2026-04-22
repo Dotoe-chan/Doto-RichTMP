@@ -74,12 +74,10 @@ namespace Doto.RichTMP
             if (vertexIndex + 3 >= vertices.Length)
                 return;
 
-            // Bias the pivot downward so extra scale grows more strongly upward, while still expanding leftward.
             Vector3 bottomRight = vertices[vertexIndex + 3];
             Vector3 bottomLeft = vertices[vertexIndex];
-            Vector3 topRight = vertices[vertexIndex + 2];
-            Vector3 pivot = Vector3.Lerp(bottomRight, bottomLeft, 0.2f);
-            pivot.y -= (topRight.y - bottomRight.y) * 0.2f;
+            float bottomY = Mathf.Min(bottomLeft.y, bottomRight.y);
+            Vector3 pivot = new(Vector3.Lerp(bottomRight, bottomLeft, 0.2f).x, bottomY, bottomRight.z);
 
             for (int i = 0; i < 4; i++)
             {
