@@ -76,8 +76,10 @@ namespace Doto.RichTMP
 
             Vector3 bottomRight = vertices[vertexIndex + 3];
             Vector3 bottomLeft = vertices[vertexIndex];
+            Vector3 topRight = vertices[vertexIndex + 2];
             float bottomY = Mathf.Min(bottomLeft.y, bottomRight.y);
-            Vector3 pivot = new(Vector3.Lerp(bottomRight, bottomLeft, 0.2f).x, bottomY, bottomRight.z);
+            float rightX = Mathf.Max(bottomRight.x, topRight.x);
+            Vector3 pivot = new(rightX, bottomY, bottomRight.z);
 
             for (int i = 0; i < 4; i++)
             {
