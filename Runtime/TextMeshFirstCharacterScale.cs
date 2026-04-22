@@ -74,16 +74,13 @@ namespace Doto.RichTMP
             if (vertexIndex + 3 >= vertices.Length)
                 return;
 
-            Vector3 center =
-                (vertices[vertexIndex] +
-                 vertices[vertexIndex + 1] +
-                 vertices[vertexIndex + 2] +
-                 vertices[vertexIndex + 3]) / 4f;
+            // Pivot from the bottom-right area so extra scale grows upward and leftward.
+            Vector3 pivot = (vertices[vertexIndex + 3] + vertices[vertexIndex + 2]) * 0.5f;
 
             for (int i = 0; i < 4; i++)
             {
-                Vector3 offset = vertices[vertexIndex + i] - center;
-                vertices[vertexIndex + i] = center + offset * scaleMultiplier;
+                Vector3 offset = vertices[vertexIndex + i] - pivot;
+                vertices[vertexIndex + i] = pivot + offset * scaleMultiplier;
             }
 
             for (int i = 0; i < textInfo.meshInfo.Length; i++)
